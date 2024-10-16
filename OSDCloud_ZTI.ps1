@@ -13,9 +13,9 @@ Write-Host  -ForegroundColor Green "Importing OSD PowerShell Module"
 Import-Module OSD -Force   
 
 #Variables to define the Windows OS / Edition etc to be applied during OSDCloud
-$OSVersion = 'Windows 10'
+$OSVersion = 'Windows 11'
 $OSReleaseID = '22H2'
-$OSName = 'Windows 10 22H2 x64'
+$OSName = 'Windows 11 22H2 x64'
 $OSEdition = 'Enterprise'
 $OSActivation = 'Volume'
 $OSLanguage = 'en-us'
@@ -25,9 +25,9 @@ $Global:MyOSDCloud = [ordered]@{
     Restart = [bool]$False
     RecoveryPartition = [bool]$true
     OEMActivation = [bool]$True
-    WindowsUpdate = [bool]$true
-    WindowsUpdateDrivers = [bool]$true
-    WindowsDefenderUpdate = [bool]$true
+    WindowsUpdate = [bool]$false
+    WindowsUpdateDrivers = [bool]$false
+    WindowsDefenderUpdate = [bool]$false
     SetTimeZone = [bool]$False
     ClearDiskConfirm = [bool]$False
     }
